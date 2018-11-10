@@ -1708,6 +1708,19 @@ const Engine = {
             return false;
         });
 
+        //Google Drive Save/Load buttons
+        Engine.Clickables.saveToGoogleDriveButton = document.getElementById("google-drive-save");
+        Engine.Clickables.saveToGoogleDriveButton.addEventListener("click", function() {
+            saveObject.saveToGoogleDrive();
+            return false;
+        });
+
+        Engine.Clickables.loadFromGoogleDriveButton = document.getElementById("google-drive-load");
+        Engine.Clickables.loadFromGoogleDriveButton.addEventListener("click", function() {
+            saveObject.loadFromGoogleDrive();
+            return false;
+        });
+
         //Character Overview buttons
         document.getElementById("character-overview-save-button").addEventListener("click", function() {
             saveObject.saveGame(indexedDb);
